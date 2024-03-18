@@ -1,0 +1,72 @@
+.mod-header {
+  height: 324px;
+  position: relative;
+
+  .logo {
+    height: 16px;
+    width: auto;
+    position: absolute;
+    z-index: 2;
+    top: 16px;
+    left: 16px;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .rule {
+    height: 40px;
+    width: 22px;
+    position: absolute;
+    top: 28px;
+    right: 0px;
+    z-index: 2;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .notice {
+    position: absolute;
+    top: 34px;
+    left: 16px;
+    z-index: 2;
+  }
+
+  .banner {
+    width: 100%;
+    height: 380px;
+
+    .banner-box {
+      height: 100%;
+
+      .swiper-pagination {
+        height: 3px;
+        top: 313px;
+        text-align: right;
+        padding-right: 16px;
+
+        .swiper-pagination-bullet {
+          width: 3px;
+          height: 3px;
+          border-radius: 3px;
+          background: #ccc;
+          margin: 0;
+
+          &+.swiper-pagination-bullet {
+            margin-left: 4px;
+          }
+
+          &.swiper-pagination-bullet-active {
+            width: 10px;
+            background: #fff;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+.mod-dress-up {
+  .title {
+    padding-left: 16px;
+    font-size: 16px;
+
+    &>span:nth-child(-n + 2) {
+      font-weight: 600;
+    }
+
+    &>span:nth-child(3) {
+      margin-left: 8px;
+    }
+
+    .title-underline {
+      background: url('https://vip.image.video.qpic.cn/vupload/20240313/439f301710294031319.png') bottom left no-repeat;
+      background-size: 49px 8px;
+    }
+
+    .sub-title {
+      font-family: 'Temp';
+      font-size: 12px;
+      line-height: 18px;
+      color: #FF6D03;
+    }
+  }
+
+  .dress-up-wrap {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .scroll-list {
+    overflow-x: scroll;
+    display: flex;
+    padding: 0 16px;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}

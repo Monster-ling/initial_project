@@ -1,0 +1,100 @@
+.benefit-item {
+  flex: 1 0;
+  min-width: 88px;
+  // height: 118px;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  background: #FFFBE7;
+
+  &+.benefit-item {
+    margin-left: 8px;
+  }
+
+  .benefit {
+    &-pic {
+      width: 100%;
+      height: 64px;
+      background: linear-gradient(171.25deg, #FFE4CB 8.15%, #FFF0D4 41.14%, #FFF3DC 105.08%);
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    &-con {
+      padding: 4px 6px 12px;
+    }
+
+    &-title {
+      @include t_nowrap(100%, 2);
+    }
+
+    &-btn {
+      width: calc(100% - 12px);
+      height: 22px;
+      line-height: 22px;
+      font-size: 10px;
+      margin: 0 auto;
+      border-radius: 40px;
+      text-align: center;
+      border: 1px solid #000;
+
+      &.is-disable {
+        background: rgba(0, 0, 0, 0.06);
+        color: rgba(0, 0, 0, 0.3);
+        border-color: rgba(0, 0, 0, 0.06);
+      }
+
+      &.is--actived {
+        color: #FFFFFF;
+        background: #000;
+      }
+
+      &.is--normal {
+        color: #000;
+        background: #FFFFFF;
+      }
+    }
+
+    &-tips {
+      @include t_nowrap(88px);
+      display: inline-block;
+      position: absolute;
+      left: -1px;
+      top: -1px;
+      font-size: 10px;
+      padding: 3px 5px 2px;
+      color: white;
+      background-color: #FFA132;
+      border-top-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+    }
+  }
+
+  &:first-child.benefit-item:last-child {
+    display: flex;
+    height: 72px;
+
+    .benefit-pic {
+      width: 108px;
+      height: 100%;
+
+    }
+
+    .benefit-con {
+      padding: 12px 0 12px 8px;
+
+      .benefit-title {
+        @include t_nowrap(100%);
+      }
+
+      .benefit-btn {
+        width: 76px;
+        display: inline-block;
+        margin-top: 10px;
+      }
+    }
+  }
+}

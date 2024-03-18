@@ -1,0 +1,18 @@
+.mod-welfare {
+
+  .scroll-list {
+    overflow-x: scroll;
+    display: flex;
+    padding: 0 16px;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    .benefit-item {
+      .benefit-pic {
+        height: 60px;
+      }
+    }
+  }
+}

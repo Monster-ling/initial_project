@@ -1,0 +1,25 @@
+.notice {
+  overflow: hidden;
+
+  .swiper {
+    height: 24px;
+    
+    .swiper-item {
+      display: inline-flex;
+      padding: 2px;
+      background: rgba(56, 30, 0, 0.2);
+      box-shadow: 0 0 0.1px rgba(255, 255, 255, 0.2);
+      border-radius: 20px;
+      margin-top: 2px;
+      .mod-avatar {
+        @include getSquare(14px);
+
+        &+span {
+          margin: 0 2px;
+          font-size: 11px;
+          color: #fff;
+        }
+      }
+    }
+  }
+}

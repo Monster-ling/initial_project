@@ -1,0 +1,71 @@
+.mod-paybar {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  // left: 0;
+  color: #000;
+  background-color: #fff;
+  padding-bottom: constant(safe-area-inset-bottom);
+  padding-bottom: env(safe-area-inset-bottom);
+  z-index: 66;
+
+  .paybar {
+    @include flex(v_h);
+    padding: 8px 16px 20px;
+
+    &-btn {
+      flex: 1 0;
+      height: 46px;
+      border-radius: 23px;
+      background: #FFB320;
+      color: #000;
+      text-align: center;
+      position: relative;
+
+      .price {
+        font-family: 'DB';
+        font-family: DIN;
+        font-size: 18px;
+        line-height: 18px;
+        margin-top: 6px;
+      }
+
+      &+.paybar-btn {
+        margin-left: 16px;
+        background: #000;
+        color: #fff;
+      }
+
+      .invite-con {
+        @include flex(v_h);
+      }
+
+      .invite-avatar {
+        position: relative;
+        @include flex(v_h);
+
+        .mod-avatar {
+          @include getSquare(16px);
+
+          &+.mod-avatar {
+            position: relative;
+            left: -4px;
+          }
+        }
+
+      }
+
+      .tips {
+        position: absolute;
+        background: #FFA132;
+        color: #fff;
+        top: -7px;
+        right: 0;
+        @include t_nowrap(88px);
+        font-size: 10px;
+        padding: 3px 5px 2px;
+        border-radius: 0px 8px 0px 8px;
+      }
+    }
+  }
+}

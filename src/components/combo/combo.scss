@@ -1,0 +1,264 @@
+.mod-combo {
+  background: #fff;
+  border-radius: 16px;
+  padding-bottom: 16px;
+
+  .combo-tabs {
+    position: relative;
+    @include flex(v_h);
+    height: 53px;
+    font-size: 16px;
+    color: $C2;
+    border-radius: 12px 12px 0 0;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 32px;
+      background: #EEEFF1;
+      border-radius: 12px 12px 0 0;
+    }
+
+    .tab {
+      position: relative;
+      flex: 1 0;
+      text-align: center;
+      background: #EEEFF1;
+      height: inherit;
+      padding-top: 8px;
+      color: rgba(0, 0, 0, 0.4);
+
+      &:first-of-type {
+        border-radius: 12px 12px 0 0;
+
+        .title {
+          width: 76px;
+          mask-image: url('https://vip.image.video.qpic.cn/vupload/20240315/71062a1710491902578.png');
+          -webkit-mask-image: url('https://vip.image.video.qpic.cn/vupload/20240315/71062a1710491902578.png');
+        }
+      }
+
+      &:nth-child(2) {
+        border-radius: 12px 12px 0 12px;
+
+        .title {
+          width: 84px;
+          mask-image: url('https://vip.image.video.qpic.cn/vupload/20240315/18e9811710491904086.png');
+          -webkit-mask-image: url('https://vip.image.video.qpic.cn/vupload/20240315/18e9811710491904086.png');
+        }
+      }
+
+      &.visited {
+        color: #111;
+        background: #fff;
+
+        &.tab:first-of-type {
+          border-radius: 12px 12px 12px 0;
+        }
+      }
+
+      .title {
+        height: 20px;
+        margin: 0 auto;
+        background: currentColor;
+        mask-size: 100% 20px;
+        mask-repeat: no-repeat;
+        -webkit-mask-size: 100% 20px;
+        -webkit-mask-repeat: no-repeat;
+      }
+
+      .desc {
+        font-size: 12px;
+        line-height: 16px;
+        margin-top: 5px;
+      }
+    }
+  }
+
+  .combo-con {
+    .pay-ways {
+      width: 100%;
+      padding: 16px;
+      margin-bottom: 20px;
+      @include flex(v_h);
+
+      .pay-way {
+        flex: 1 0;
+        border-radius: 12px;
+        background: #FFF8EE;
+        text-align: center;
+        padding: 12px 0;
+
+        &>div+div {
+          margin-top: 4px;
+        }
+
+        .way-title {
+          font-style: 14px;
+          font-weight: 600;
+          color: $C1;
+        }
+
+        .way-price {
+          color: #F6B202;
+          height: 40px;
+          line-height: 40px;
+
+          .price-num {
+            font-family: 'DB';
+            font-size: 40px;
+            vertical-align: sub;
+          }
+        }
+
+        .way-desc {
+          color: $C2;
+
+          .discount {
+            text-decoration: line-through;
+          }
+
+          div {
+            img {
+              display: inline-block;
+              position: relative;
+              top: -1px;
+              @include getSquare(12px);
+            }
+          }
+        }
+
+        &+.pay-way {
+          margin-left: 8px;
+        }
+
+        &.active {
+          position: relative;
+          z-index: 0;
+
+          &::after {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 123px;
+            width: 100%;
+            @include getBgImg('https://vip.image.video.qpic.cn/vupload/20240312/99715f1710234671596.png');
+          }
+
+          &:first-child.pay-way:last-child {
+            &.active {
+              &::after {
+                height: 100px;
+                background-image: url('https://vip.image.video.qpic.cn/vupload/20240312/77b8931710234409295.png')
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .combo-list {
+      @include flex(justify);
+      flex-wrap: wrap;
+      padding: 16px;
+
+      .combo-item {
+        display: inline-block;
+        width: 74px;
+        height: 76px;
+        text-align: center;
+        margin: 0 0 12px;
+        position: relative;
+
+        .combo-icon {
+          @include getSquare(36px);
+          margin: 0 auto;
+          position: relative;
+
+          img {
+            width: 36px;
+            height: 36px;
+          }
+        }
+
+        .combo-tips {
+          background: #FF3535;
+          color: #fff;
+          position: absolute;
+          top: -7px;
+          right: -50%;
+          @include t_nowrap(88px);
+          font-size: 10px;
+          padding: 3px 5px 2px;
+          border-radius: 20px 20px 20px 0;
+        }
+
+        .combo-txt {
+          margin-top: 4px;
+
+          .title {
+            @include t_nowrap(100%);
+            letter-spacing: -0.2px;
+          }
+
+          .desc {
+            @include t_nowrap(100%);
+            vertical-align: top;
+            height: 18px;
+            color: #FF9838;
+          }
+        }
+
+        /* 如果最后一行是3个元素 */
+        &:last-child:nth-child(4n - 1) {
+          margin-right: calc((311px - 74px) / 3);
+        }
+
+        /* 如果最后一行是2个元素 */
+        &:last-child:nth-child(4n - 2) {
+          margin-right: calc((311px - 74px) / 3 * 2);
+        }
+
+        &.lock {
+          &::before {
+            display: block;
+            content: "";
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            left: 0px;
+            bottom: 0px;
+            background-color: rgba(#fff, 0.6);
+            z-index: 1;
+          }
+
+          &::after {
+            display: block;
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 18px;
+            width: 12px;
+            height: 12px;
+            @include getBgImg('https://vip.image.video.qpic.cn/vupload/20240312/d3ad491710234409430.png');
+            z-index: 1;
+          }
+        }
+      }
+    }
+
+    .detail-btn {
+      @include flex(v_h);
+
+      img {
+        @include getSquare(12px);
+        margin-left: 2px;
+      }
+    }
+  }
+}

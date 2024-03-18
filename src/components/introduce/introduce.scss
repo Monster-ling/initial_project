@@ -1,0 +1,43 @@
+.mod-introduce {
+  position: relative;
+  border-radius: 20px;
+  padding: 16px 16px 14px;
+  background: #fff;
+  margin-top: 16px;
+
+  .introduce {
+    &-title {
+      height: 24px;
+      width: auto;
+
+      img {
+        height: 100%;
+        width: auto;
+      }
+
+      &+.introduce-desc {
+        margin-top: 16px;
+      }
+    }
+
+    &-desc {
+      width: 100%;
+      line-height: 18px;
+
+      &+.introduce-pic {
+        margin-top: 12px;
+      }
+    }
+
+    &-pic {
+      height: 160px;
+      width: 100%;
+      border-radius: 12px;
+
+      img {
+        @include getSquare(100%);
+        border-radius: 12px;
+      }
+    }
+  }
+}

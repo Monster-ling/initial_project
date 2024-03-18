@@ -1,0 +1,39 @@
+.mod-privilege-item {
+  &+.mod-privilege-item {
+    margin-top: 36px;
+  }
+
+  .privilege-item-title {
+    padding-left: 16px;
+    font-size: 16px;
+
+    &>span:nth-child(-n + 2) {
+      font-weight: 600;
+    }
+
+    &>span:nth-child(n + 2) {
+      margin-left: 8px;
+    }
+
+    .title-underline {
+      background: url('https://vip.image.video.qpic.cn/vupload/20240313/439f301710294031319.png') bottom left no-repeat;
+      background-size: 49px 8px;
+    }
+
+    .sub-title {
+      font-family: 'Temp';
+      line-height: 18px;
+      color: #FF6D03;
+    }
+
+    .desc {
+      font-size: 12px;
+    }
+  }
+
+  .privilege-item-con {
+    width: 100%;
+    overflow: hidden;
+    margin-top: 12px;
+  }
+}

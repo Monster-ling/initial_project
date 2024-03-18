@@ -1,0 +1,68 @@
+.mod-user-combo {
+  position: relative;
+
+  .vip-card {
+    // height: 74px;
+
+    .card-bg {
+      height: 96px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: -1;
+      @include getBgImg('https://vip.image.video.qpic.cn/vupload/20240312/efb6601710234409294.png')
+    }
+
+    &.active {
+      .card-bg {
+        height: 120px;
+        background-image: url('https://vip.image.video.qpic.cn/vupload/20240313/4ef9d11710304793805.png');
+      }
+    }
+
+    .card-info {
+      padding: 16px 0 24px 16px;
+      display: flex;
+      align-items: flex-start;
+      color: #fff;
+
+      .mod-avatar {
+        @include getSquare(40px);
+
+      }
+
+      .user-info {
+        margin-left: 12px;
+
+        .user-name {
+          font-size: 16px;
+          font-weight: 500;
+          line-height: 22px;
+
+          .vip-level {
+            display: inline-block;
+            height: 14px;
+            width: auto;
+            margin-left: 4px;
+          }
+          span,
+          .vip-level {
+            vertical-align: middle;
+          }
+          &+.user-status {
+            margin-top: 2px;
+          }
+        }
+
+        .order {
+          .mod-arrow {
+            width: 7px;
+            height: 7px;
+            margin-left: 2px;
+          }
+        }
+      }
+    }
+  }
+}

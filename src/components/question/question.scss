@@ -1,0 +1,50 @@
+.mod-question {
+  background: #fff;
+  border-radius: 16px;
+  padding: 16px 16px 12px;
+  margin-top: 16px;
+
+  .question-title {
+    font-family: 'Temp';
+    font-size: 22px;
+    height: 24px;
+
+  }
+
+  .question-list {
+    width: 100%;
+    margin: 16px 0 12px;
+    background: #F7F7F7;
+    border-radius: 8px;
+    padding: 8px 0;
+
+    .question-item {
+      height: 32px;
+      display: flex;
+      align-items: center;
+      padding: 0 12px;
+
+      .txt {
+        flex: 1 0;
+        @include t_nowrap(100%);
+      }
+
+      .mod-arrow {
+        flex-shrink: 0;
+        width: 7px;
+        height: 7px;
+        margin-left: 2px;
+      }
+    }
+  }
+
+  .help-btn {
+    text-align: center;
+
+    .mod-arrow {
+      width: 7px;
+      height: 7px;
+      margin-left: 2px;
+    }
+  }
+}

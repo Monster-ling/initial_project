@@ -1,0 +1,60 @@
+@mixin flex($layout: flex) {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+
+  // 垂直，水平居中
+  @if $layout == v_h {
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+  }
+
+  // 两端对齐
+  @if $layout == justify {
+    justify-content: space-between;
+    -webkit-justify-content: space-between;
+  }
+
+  // 两端对齐，垂直居中
+  @if $layout == v_justify {
+    justify-content: space-between;
+    -webkit-justify-content: space-between;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+}
+
+// 超过某个长度显示省略号
+@mixin t_nowrap($width: 100%, $lineNum: 1) {
+  @if $lineNum == 1 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: $width;
+    vertical-align: top;
+  }
+
+  @else {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $lineNum;
+    overflow: hidden;
+    white-space: normal;
+  }
+}
+
+//获得一个等宽高
+@mixin getSquare($size) {
+  width: $size;
+  height: $size;
+}
+
+//可以拉伸的背景图
+@mixin getBgImg($url){
+  background-image:url($url);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: 0 0;
+}

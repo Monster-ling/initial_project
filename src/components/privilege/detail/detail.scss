@@ -1,0 +1,23 @@
+.mod-detail {
+  .detail-con {
+    margin: 0 16px;
+    height: 108px;
+    position: relative;
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+
+    .detail-btn {
+      width: 70px;
+      height: 25px;
+      position: absolute;
+      bottom: 12px;
+      left: 12px;
+    }
+  }
+}
