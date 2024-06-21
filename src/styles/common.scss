@@ -60,3 +60,16 @@ html.simple_fit {
   background: rgba(0, 0, 0, 0.3);
   z-index: 99;
 }
+
+.popup-btn {
+  width: calc(100% - 40px);
+  background: #000;
+  color: #fff;
+  text-align: center;
+  height: 44px;
+  line-height: 44px;
+  border-radius: 60px;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0 auto;
+}

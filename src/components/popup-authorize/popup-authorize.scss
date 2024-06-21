@@ -1,0 +1,80 @@
+.popup-authorize {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 311px;
+  background-color: #F5F5F5;
+  color: #111;
+  border-radius: 12px;
+  z-index: 99;
+  padding: 20px;
+
+  .title {
+    height: 24px;
+    line-height: 24px;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 16px;
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 24px;
+    height: 24px;
+
+    img {
+      @include getSquare(100%);
+    }
+  }
+
+  .con {
+    font-size: 14px;
+
+    .desc {
+      width: 100%;
+      text-align: justify;
+      line-height: 22px;
+    }
+
+
+    .tips {
+      margin-top: 20px;
+      color: #808080;
+      line-height: 18px;
+      font-size: 12px;
+      font-weight: 300;
+
+      span {
+        color: #111;
+      }
+
+      .check-btn {
+        position: relative;
+        top: 2px;
+        display: inline-block;
+        @include getSquare(14px);
+        @include getBgImg('https://vip.image.video.qpic.cn/vupload/20240510/f2bd521715929735840.png');
+
+        &.is-checked {
+          background-image: url('https://vip.image.video.qpic.cn/vupload/20240510/9636e41715929735841.png');
+        }
+      }
+    }
+  }
+
+  .pay-btn {
+    margin-top: 16px;
+    margin-bottom: 20px;
+    @include getBtn(100%, 46px, #f1c46c, #663d00, 23px);
+    font-size: 14px;
+    background-image: linear-gradient(to right, #ffdf89, #f2ca5b);
+
+    &.disabled {
+      opacity: 0.3;
+    }
+  }
+}

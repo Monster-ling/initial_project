@@ -1,0 +1,124 @@
+.popup-invite-success {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 290px;
+  background-color: #ffffff;
+  color: #000;
+  border-radius: 12px;
+  z-index: 99;
+  padding: 20px 0;
+
+  .success-title {
+    height: 22px;
+    line-height: 22px;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 16px;
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 24px;
+    height: 24px;
+
+    img {
+      @include getSquare(100%);
+    }
+  }
+
+  .success-con {
+    padding: 0 20px;
+    font-size: 14px;
+
+    .success-desc {
+      width: 100%;
+      text-align: center;
+
+      span {
+        display: inline-block;
+        @include t_nowrap(40px);
+
+      }
+    }
+
+    .user {
+      @include flex(v_h);
+      position: relative;
+      padding-top: 16px;
+
+      .success-icon {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: -12px;
+        width: 51px;
+        height: 41px;
+        @include getBgImg('https://vip.image.video.qpic.cn/vupload/20240315/e8dd9f1710488394206.png');
+      }
+
+      .mod-avatar {
+        @include getSquare(56px);
+
+        &+.mod-avatar {
+          margin-left: 22px;
+        }
+      }
+    }
+
+    .success-combo {
+      background: #FFFBE7;
+      border-radius: 12px;
+      @include flex(v_h);
+      height: 66px;
+      padding: 0 12px;
+      margin-top: 16px;
+      font-size: 12px;
+
+      .combo-left {
+        padding: 12px 0 10px;
+
+        .title {
+          font-size: 16px;
+          line-height: 22px;
+          font-weight: $f-bold;
+        }
+
+        .type {
+          margin-top: 6px;
+        }
+      }
+
+      .combo-right {
+        flex: 1 0;
+        text-align: right;
+
+        .price {
+          line-height: 32px;
+          height: 32px;
+
+          .num {
+            font-family: 'DB';
+            font-size: 32px;
+            line-height: 32px;
+          }
+
+          &+.desc {
+            margin-top: 5px;
+            margin-bottom: 7px;
+            line-height: 16px;
+          }
+        }
+
+      }
+    }
+  }
+
+  .success-btn {
+    margin-top: 16px;
+  }
+}
